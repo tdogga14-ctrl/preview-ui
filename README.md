@@ -9,7 +9,7 @@ Tailwind plugin that adds production-grade styling and adaptive dark-mode compon
 npm install @premium-ai/preview-ui --save-dev
 ```
 
-```
+```html
 <div class="ai-preview fade-in">
   <div class="preview-loading">
     <i class="fas fa-spinner fa-spin"></i>
