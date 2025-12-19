@@ -5,7 +5,6 @@
  */
 module.exports = {
   branches: ['main'],
-  repositoryUrl: 'https://github.com/premium-ai/preview-ui',
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',

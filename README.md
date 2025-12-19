@@ -1,14 +1,14 @@
-# premium-ai-preview-ui
+# @premium-ai/preview-ui
 
-Small UI for premium AI preview components. This repository contains the frontend code and CI workflows.
+Tailwind plugin that adds production-grade styling and adaptive dark-mode components for **Premium AI Headshots** realtime preview.
 
-## Setup
+---
 
-- Install dependencies (if JS/Node project): `npm install` or `yarn`
-- Run dev server: `npm run dev` or `yarn dev`
+## 🔧 Installation
 
-## Files added
-
-- `README.md` — project summary
-- `LICENSE` — MIT license
-- `.gitignore` — ignores common build and OS files
+```bash
+npm install @premium-ai/preview-ui --save-dev<div class="ai-preview fade-in">
+  <div class="preview-loading">
+    <i class="fas fa-spinner fa-spin"></i>
+  </div>
+</div>
