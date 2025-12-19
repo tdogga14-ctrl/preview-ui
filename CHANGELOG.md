@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/tdogga14-ctrl/preview-ui/compare/v1.0.1...v1.0.2) (2025-12-19)
+
+
+### Bug Fixes
+
+* correct npmrc for public package publishing ([bbb9fd4](https://github.com/tdogga14-ctrl/preview-ui/commit/bbb9fd434d804c553922677c8cae5dc143049cea))
+
 ## [1.0.1](https://github.com/tdogga14-ctrl/preview-ui/compare/v1.0.0...v1.0.1) (2025-12-19)
 
 
