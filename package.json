@@ -1,6 +1,6 @@
 {
   "name": "@premium-ai/preview-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tailwind plugin providing adaptive, dark-mode UI components for Premium AI Headshots realtime preview.",
   "main": "index.js",
   "publishConfig": {

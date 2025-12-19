@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/tdogga14-ctrl/preview-ui/compare/v1.0.0...v1.0.1) (2025-12-19)
+
+
+### Bug Fixes
+
+* correct npm package scope to [@tdogga14](https://github.com/tdogga14) ([b49e304](https://github.com/tdogga14-ctrl/preview-ui/commit/b49e304238f5569e3ae437bd4623e3954be263b3))
+
 # 1.0.0 (2025-12-19)
 
 
