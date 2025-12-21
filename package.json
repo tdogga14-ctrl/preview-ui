@@ -1,5 +1,5 @@
 {
-  https://registry.npmjs.org/preview-ui-tdogga
+  "name": "@premium-ai/preview-ui",
   "version": "1.0.5",
   "description": "Tailwind plugin providing adaptive, dark-mode UI components for Premium AI Headshots realtime preview.",
   "main": "index.js",
