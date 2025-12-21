@@ -1,4 +1,8 @@
 # @premium-ai/preview-ui
+**Live demo:** https://tdogga14-ctrl.github.io/preview-ui/
+
+[![Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://tdogga14-ctrl.github.io/preview-ui/)
+[![npm](https://img.shields.io/npm/v/@premium-ai/preview-ui)](https://www.npmjs.com/package/@premium-ai/preview-ui)
 
 Tailwind plugin that adds production-grade styling and adaptive dark-mode components for **Premium AI Headshots** realtime preview.
 
