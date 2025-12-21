@@ -39,6 +39,8 @@ module.exports = plugin(function ({ addComponents }) {
 
     '.quality-badge': { '@apply inline-block px-2 py-1 text-xs font-semibold rounded-md mt-1': {} },
 
+    '.ai-preview': { '@apply bg-white rounded-xl shadow-lg': {} },
+
     '@media (prefers-color-scheme: dark)': {
       body: { '@apply bg-gray-900 text-gray-100': {} },
       '.ai-preview': { '@apply bg-gray-800 border border-gray-700 rounded-xl shadow-xl': {} },
