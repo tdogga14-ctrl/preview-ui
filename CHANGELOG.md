@@ -3,6 +3,14 @@
 
 ### Bug Fixes
 
+* pages build install tailwind for plugin ([a5fd864](https://github.com/tdogga14-ctrl/preview-ui/commit/a5fd86431ebd9acf8e66f664015024c772b1f510))
+* remove accidental submodule and flatten repo ([246d82a](https://github.com/tdogga14-ctrl/preview-ui/commit/246d82ae3a249c2c26d074a4880f6e92ba82fa74))
+
+## [1.0.4](https://github.com/tdogga14-ctrl/preview-ui/compare/v1.0.3...v1.0.4) (2025-12-21)
+
+
+### Bug Fixes
+
 * remove accidental submodule and flatten repo ([246d82a](https://github.com/tdogga14-ctrl/preview-ui/commit/246d82ae3a249c2c26d074a4880f6e92ba82fa74))
 
 ## [1.0.4](https://github.com/tdogga14-ctrl/preview-ui/compare/v1.0.3...v1.0.4) (2025-12-21)
