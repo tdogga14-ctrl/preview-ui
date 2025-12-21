@@ -58,10 +58,12 @@ module.exports = plugin(function ({ addComponents }) {
       '#satisfactionText': { '@apply text-gray-300': {} }
     }
   });
-});const previewUI = require('@premium-ai/preview-ui');
+});
 
-module.exports = {
-  content: ['./src/**/*.{html,js}'],
-  darkMode: 'media',
-  plugins: [previewUI],
-};
+// Example usage in a consumer tailwind.config.js (do not export from here):
+// const previewUI = require('@premium-ai/preview-ui');
+// module.exports = {
+//   content: ['./src/**/*.{html,js}'],
+//   darkMode: 'media',
+//   plugins: [previewUI]
+// };
