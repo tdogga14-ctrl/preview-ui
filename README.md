@@ -47,3 +47,24 @@ Drop the classes into your preview markup:
   </div>
 </div>
 ```
+
+---
+
+## 🚀 Publishing & CI/CD
+
+This package uses [semantic-release](https://github.com/semantic-release/semantic-release) for automated versioning and publishing to npm.
+
+### For Repository Maintainers
+
+To set up automated releases, you need to configure the `NPM_TOKEN` GitHub secret:
+
+1. Generate an npm **Automation** token at [npmjs.com](https://www.npmjs.com/settings/~/tokens)
+2. Add it as a repository secret named `NPM_TOKEN` in GitHub Settings → Secrets and variables → Actions
+
+See [TROUBLESHOOTING.md](./TROUBLESHOOTING.md) for detailed setup instructions and common issues.
+
+---
+
+## 📝 License
+
+MIT
