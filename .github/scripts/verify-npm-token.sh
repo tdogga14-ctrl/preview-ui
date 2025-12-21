@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Verification script to test NPM_TOKEN configuration locally
 # Usage: NPM_TOKEN=your_token_here ./.github/scripts/verify-npm-token.sh
 
@@ -64,7 +64,8 @@ echo "Next steps:"
 echo "1. Add this token to GitHub Secrets as 'NPM_TOKEN'"
 REPO_URL=$(git remote get-url origin 2>/dev/null || echo "")
 if [[ -n "$REPO_URL" ]]; then
-    REPO_PATH=$(echo "$REPO_URL" | sed 's/.*github.com[:/]\(.*\)\.git/\1/' | sed 's/\.git$//')
+    # Handle both HTTPS and SSH URLs, with or without .git suffix
+    REPO_PATH=$(echo "$REPO_URL" | sed -E 's#.*github\.com[:/]([^/]+/[^/]+)(\.git)?$#\1#')
     echo "2. Go to: https://github.com/$REPO_PATH/settings/secrets/actions"
 else
     echo "2. Go to your GitHub repository → Settings → Secrets and variables → Actions"
