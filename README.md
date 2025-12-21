@@ -1,53 +1,52 @@
-# @premium-ai/preview-ui
-**Live demo:** https://tdogga14-ctrl.github.io/preview-ui/
+Use it to drop in ready-made loading, progress, skeleton, error, and upsell UI classes for preview flows.
+## ⚡ Quick start
 
-[![Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://tdogga14-ctrl.github.io/preview-ui/)
-[![npm](https://img.shields.io/npm/v/@premium-ai/preview-ui)](https://www.npmjs.com/package/@premium-ai/preview-ui)
+Install:
 
-Tailwind plugin that adds production-grade styling and adaptive dark-mode components for **Premium AI Headshots** realtime preview.
-
----
-
-## 🔧 Installation
-```bash
 npm install @premium-ai/preview-ui --save-dev
-```
 
-Add the plugin to your Tailwind config (dark mode is `media`):
+Add the plugin to Tailwind:
 
-```js
 // tailwind.config.js
 const previewUI = require('@premium-ai/preview-ui');
 
 module.exports = {
   content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
   darkMode: 'media',
-  plugins: [previewUI]
+  plugins: [previewUI],
 };
-```
 
-Drop the classes into your preview markup:
+Use the classes:
 
-```html
-<div class="ai-preview fade-in">
+<div class="ai-preview fade-in loaded">
   <div class="preview-loading">
-    <i class="fas fa-spinner fa-spin"></i>
+    <i>⏳</i>
+    <p class="text-sm text-gray-600">Processing... 45%</p>
+    <div class="progress">
+      <div class="progress-bar" style="width: 45%;"></div>
+    </div>
   </div>
-  <div class="skeleton"></div>
-  <div class="preview-image-container">
+
+  <div class="skeleton mt-4"></div>
+
+  <div class="preview-image-container mt-4">
     <img class="preview-image loaded" src="/path/to/image.jpg" alt="AI headshot" />
     <div class="preview-overlay">
       <button>Retake</button>
       <button>Download</button>
     </div>
   </div>
-  <div class="upsell-card">
+
+  <div class="upsell-card mt-4 p-4 rounded-xl">
+    <p class="font-semibold">Upgrade for HD exports</p>
     <span class="quality-badge text-green-500">HD</span>
   </div>
-  <div class="error-state hidden">
-    <i class="fas fa-exclamation-circle"></i>
+
+  <div class="error-state mt-4">
+    <i>⚠️</i>
     <p>Something went wrong. Try again.</p>
     <button>Retry</button>
   </div>
 </div>
-```
+
+Note: Icon fonts (Font Awesome, etc.) are not included. Use your own icons if you want.
