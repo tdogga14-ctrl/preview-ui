@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/tdogga14-ctrl/preview-ui/compare/v1.0.2...v1.0.3) (2025-12-21)
+
+
+### Bug Fixes
+
+* update README usage ([740609d](https://github.com/tdogga14-ctrl/preview-ui/commit/740609d2a65a0a45d94d5df13c41a918ba5ddf4e))
+
 ## [1.0.2](https://github.com/tdogga14-ctrl/preview-ui/compare/v1.0.1...v1.0.2) (2025-12-19)
 
 
