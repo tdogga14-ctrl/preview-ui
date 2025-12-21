@@ -1,12 +1,12 @@
 Use it to drop in ready-made loading, progress, skeleton, error, and upsell UI classes for preview flows.
+
 ## ⚡ Quick start
 
+```text
 Install:
-
 npm install @premium-ai/preview-ui --save-dev
 
 Add the plugin to Tailwind:
-
 // tailwind.config.js
 const previewUI = require('@premium-ai/preview-ui');
 
@@ -17,7 +17,6 @@ module.exports = {
 };
 
 Use the classes:
-
 <div class="ai-preview fade-in loaded">
   <div class="preview-loading">
     <i>⏳</i>
@@ -50,3 +49,4 @@ Use the classes:
 </div>
 
 Note: Icon fonts (Font Awesome, etc.) are not included. Use your own icons if you want.
+```
