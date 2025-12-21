@@ -103,3 +103,4 @@ module.exports = plugin(function ({ addComponents }) {
     },
   });
 });
+});
