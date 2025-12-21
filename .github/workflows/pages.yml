@@ -1,16 +1,38 @@
-steps:
-  - uses: actions/checkout@v4
-  - uses: actions/setup-node@v4
-    with:
-      node-version: 22
+name: Deploy Demo to GitHub Pages
 
-  - name: Install Tailwind for root plugin
-    run: npm install tailwindcss --no-save
+on:
+  push:
+    branches: [main]
 
-  - name: Install
-    working-directory: demo
-    run: npm ci
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-  - name: Build
-    working-directory: demo
-    run: npm run build
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Fix: Tailwind plugin lives at repo root and requires tailwindcss/plugin
+      - name: Install Tailwind for root plugin
+        run: npm install tailwindcss --no-save
+
+      - name: Install demo deps
+        working-directory: demo
+        run: npm ci
+
+      - name: Build demo
+        working-directory: demo
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: demo/dist
+
+      - uses: actions/deploy-pages@v4
