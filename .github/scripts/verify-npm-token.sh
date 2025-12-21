@@ -47,11 +47,13 @@ if [[ $PACKAGE_NAME == @* ]]; then
     SCOPE=$(echo $PACKAGE_NAME | cut -d'/' -f1 | sed 's/@//')
     echo "🏢 Checking access to scope: @$SCOPE"
     
+    # Try to check access, but don't fail if we can't
     if npm access ls-packages @$SCOPE 2>/dev/null | grep -q "$PACKAGE_NAME"; then
         echo "✅ You have access to publish $PACKAGE_NAME"
     else
-        echo "⚠️  WARNING: Could not verify publish access to $PACKAGE_NAME"
-        echo "   Make sure you have publish rights for scope @$SCOPE"
+        echo "⚠️  Could not verify publish access to $PACKAGE_NAME"
+        echo "   This may be normal for private scopes or due to npm access restrictions"
+        echo "   The token will still work if you have publish rights"
     fi
 fi
 
@@ -60,7 +62,13 @@ echo "✅ All checks passed!"
 echo ""
 echo "Next steps:"
 echo "1. Add this token to GitHub Secrets as 'NPM_TOKEN'"
-echo "2. Go to: https://github.com/$(git remote get-url origin | sed 's/.*github.com[:/]\(.*\)\.git/\1/')/settings/secrets/actions"
+REPO_URL=$(git remote get-url origin 2>/dev/null || echo "")
+if [[ -n "$REPO_URL" ]]; then
+    REPO_PATH=$(echo "$REPO_URL" | sed 's/.*github.com[:/]\(.*\)\.git/\1/' | sed 's/\.git$//')
+    echo "2. Go to: https://github.com/$REPO_PATH/settings/secrets/actions"
+else
+    echo "2. Go to your GitHub repository → Settings → Secrets and variables → Actions"
+fi
 echo "3. Click 'New repository secret'"
 echo "4. Name: NPM_TOKEN"
 echo "5. Value: [paste your token]"

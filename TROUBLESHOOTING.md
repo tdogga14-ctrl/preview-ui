@@ -85,7 +85,7 @@ Make sure your npm token has the following:
 If you changed the package scope in `package.json`, ensure:
 - The npmjs.com token has access to publish to that scope
 - The scope exists on npmjs.com
-- For organization scopes, you must be a member with publish permissions
+- For organization scopes (e.g., `@your-org/package-name`), you must be a member with publish permissions
 
 ### Token Expiration
 
