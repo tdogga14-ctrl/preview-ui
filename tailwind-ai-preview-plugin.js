@@ -58,10 +58,4 @@ module.exports = plugin(function ({ addComponents }) {
       '#satisfactionText': { '@apply text-gray-300': {} }
     }
   });
-});const previewUI = require('@premium-ai/preview-ui');
-
-module.exports = {
-  content: ['./src/**/*.{html,js}'],
-  darkMode: 'media',
-  plugins: [previewUI],
-};
+});
