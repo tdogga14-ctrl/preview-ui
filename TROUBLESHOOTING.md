@@ -36,12 +36,29 @@ The workflow file `.github/workflows/release.yml` should already be correctly co
 ```yaml
 - name: 🚀 Run semantic-release
   env:
-    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN}}
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
   run: npx semantic-release
 ```
 
-#### 4. Test the Fix
+#### 4. Test Locally (Optional but Recommended)
+
+Before adding the token to GitHub, verify it works locally:
+
+```bash
+# Export your token
+export NPM_TOKEN="your-npm-token-here"
+
+# Run the verification script
+./.github/scripts/verify-npm-token.sh
+```
+
+This script will:
+- Verify the token is valid
+- Check you can authenticate with npm
+- Confirm you have publish access to the package scope
+
+#### 5. Test the Fix
 
 Push a new commit to the `main` branch with a conventional commit message:
 
